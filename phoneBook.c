@@ -318,6 +318,8 @@ void update(FILE *file){
 						remove("person.txt");
 						rename("temp.txt","person.txt");
 						remove("temp.txt");
+						file=fopen("person.txt","r");
+						fclose(file);
 						printf("\nupdated\n");		
 					}
 					break;
