@@ -371,6 +371,8 @@ void deletePerson(FILE *file){
 						remove("person.txt");
 						rename("temp.txt","person.txt");
 						remove("temp.txt");
+						file=fopen("person.txt","r");
+						fclose(file);
 						printf("\ndeleted\n");		
 					break;
 				case 2:
